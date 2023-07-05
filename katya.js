@@ -41,6 +41,7 @@ let eleccion
 let opcionDeNombreEnemigo
 let inputIrvin
 let inputBertha
+let inputYobanny
 let alumnoJugador
 let alumnoObjeto
 let ataquesMokepon
@@ -55,56 +56,56 @@ let intervalo
 let vidasJugador = 4
 let vidasEnemigo = 5
 let preguntaUno = "Son ejemplos de metales pesados:"
-let preguntaDos = "¿Cuál es la estructura de la γ-alumina?"
+let preguntaDos = "¿Cuál es la estructura de la γ-alúmina?"
 let preguntaTres = "¿Para qué sirve la urea en la síntesis de boehmita?"
 let preguntaCuatro = "¿Cómo se comporta el nitrato de aluminio?"
-let preguntaCinco = "¿Cuál es la temperatura óptima para remover níquel con  γ -alumina?"
-let preguntaSeis = "Un pH elevado, ¿qué cambio genera en la γ -alumina?"
+let preguntaCinco = "¿Cuál es la temperatura óptima para remover níquel con  γ -alúmina?"
+let preguntaSeis = "Un pH elevado, ¿qué cambio genera en la γ -alúmina?"
 let preguntaSiete = "¿Cómo ayuda la temperatura a la adsorción de níquel?"
 let preguntaOcho = "¿Por qué en el artículo no se utilizaron concentraciones de níquel mayores a 500 mg/L?"
-let preguntaNueve = "¿De qué tamaño se mostró la γ -alumina en el SEM?"
+let preguntaNueve = "¿De qué tamaño se mostró la γ -alúmina en el SEM?"
 let preguntaDiez = "¿Qué pasa con la absorción de níquel con el tiempo?"
 
-let respuestaUno = "1). Plomo, Cloro, Niquel, Cobre."
-let respuestaDos = "2). Plomo, Cobalto, Selenio, Cobre."
+let respuestaUno = "4). Plomo, Cromo, Niquel, Cobre."
+let respuestaDos = "1). Plomo, Cloro, Niquel, Cobre."
 let respuestaTres = "3). Mercurio, Selenio, Plomo, Cobre."
-let respuestaCuatro = "4). Plomo, Cromo, Niquel, Cobre."
+let respuestaCuatro = "2). Plomo, Cobalto, Selenio, Cobre."
 let respuestaCinco = "1). Octaédrica"
 let respuestaSeis = "2). Hexagonal"
 let respuestaSiete = "4). El doctor ha de saber"
 let respuestaOcho = "3). Ortorrómbica"
 let respuestaNueve = "1). Crea una micela"
-let respuestaDiez = "2). Genera una atmósfera inerte"
+let respuestaDiez = "4). Actua como base, sustrayendo hidrógenos"
 let respuesta2Uno = "3). Aumenta el punto de fusión"
-let respuesta2Dos = "4). Actua como base, sustrayendo hidrógenos"
+let respuesta2Dos = "2). Genera una atmósfera inerte"
 let respuesta2Tres = "1). Como agente reductor"
 let respuesta2Cuatro = "2). Como material cerámico"
 let respuesta2Cinco = "3). Como sal orgánica"
 let respuesta2Seis = "4). Como ácido de Lewis"
 let respuesta2Siete = "1). 50°C"
-let respuesta2Ocho = "2). 60°C"
+let respuesta2Ocho = "4). 40°C"
 let respuesta2Nueve = "3). 30°C"
-let respuesta2Diez = "4). 40°C"
+let respuesta2Diez = "2). 60°C"
 let respuesta3Uno = "1). Quién sabe"
 let respuesta3Dos = "2). Incrementa el porcentaje de adsorción de niquel"
-let respuesta3Tres = "3). Produce un cambio de fase"
-let respuesta3Cuatro = "4). Genera un cambio de carga superficial"
+let respuesta3Tres = "4). Genera un cambio de carga superficial"
+let respuesta3Cuatro = "3). Produce un cambio de fase"
 let respuesta3Cinco = "1). Genera un cambio de carga superficial"
 let respuesta3Seis = "2). Elimina impurezas"
 let respuesta3Siete = "3). Aumenta el área adsorbente efectiva"
 let respuesta3Ocho = "4). Aumenta la energía cinética de los iones"
-let respuesta3Nueve = "1). Porque cambia el estado de oxidación"
+let respuesta3Nueve = "4). Porque la superficie adsorbente se sobresatura"
 let respuesta3Diez = "2). Porque el niquel podía lixiviar la superficie"
 let respuesta4Uno = "3). Porque cambia la constante dieléctrica"
-let respuesta4Dos = "4). Porque la superficie adsorbente se sobresatura"
-let respuesta4Tres = "1). 10 - 25 nm"
+let respuesta4Dos = "1). Porque cambia el estado de oxidación"
+let respuesta4Tres = "3). 8 - 13 nm"
 let respuesta4Cuatro = "2). 5 - 10 nm"
-let respuesta4Cinco = "3). 8 - 13 nm"
-let respuesta4Seis = "4). 10 - 15 nm"
+let respuesta4Cinco = "4). 10 - 15 nm"
+let respuesta4Seis = "1). 10 - 25 nm"
 let respuesta4Siete = "1). Ocurre la formación de radicales libres"
-let respuesta4Ocho = "2). Disminuye dramáticamente"
+let respuesta4Ocho = "4). Alcanza un nivel constante"
 let respuesta4Nueve = "3). Incrementa indefinidamente"
-let respuesta4Diez = "4). Alcanza un nivel constante"
+let respuesta4Diez = "2). Disminuye dramáticamente"
 let lienzo = mapa.getContext("2d")
 let mapaBackground = new Image()
 mapaBackground.src = './assets/ICB.jpg'
@@ -158,7 +159,9 @@ let katya = new Alumno('Katya', './assets/katya.png', 3, './assets/katya.png')
 
 let catalan = new Alumno('Catalán', './assets/catalan.png', 3, './assets/catalan.png')
 
-let yobanny = new Alumno('Dr. Reyes', './assets/reyeslopez.png', 3, './assets/reyeslopez.png')
+let yobanny = new Alumno('Simón', './assets/reyeslopez.png', 3, './assets/reyeslopez.png')
+
+let yobannyReyes = new Alumno('Yobanny', './assets/simon.png', 3, './assets/simon.png')
 
 preguntas.push(preguntaUno, preguntaDos, preguntaTres, preguntaCuatro, preguntaCinco, preguntaSeis, preguntaSiete, preguntaOcho, preguntaNueve, preguntaDiez)
 respuestasFirst.push(respuestaUno, respuestaDos, respuestaTres, respuestaCuatro)
@@ -203,7 +206,14 @@ bertha.ataques.push(
     { nombre: ' 4️⃣', id: 'boton-cuatro' },
 )
 
-individuos.push(ivan, irvin, bertha)
+yobanny.ataques.push(
+    { nombre: ' 1️⃣', id: 'boton-uno' },
+    { nombre: ' 2️⃣', id: 'boton-dos' },
+    { nombre: ' 3️⃣', id: 'boton-tres' },
+    { nombre: ' 4️⃣', id: 'boton-cuatro' },
+)
+
+individuos.push(ivan, irvin, bertha, yobanny)
 
 function iniciarJuego() {
     
@@ -223,6 +233,7 @@ function iniciarJuego() {
      inputIvan = document.getElementById('Iván')
      inputIrvin = document.getElementById('Irvin')
      inputBertha = document.getElementById('Bertha')
+     inputYobanny = document.getElementById('Simón')
 
     })
     
@@ -244,6 +255,9 @@ function seleccionarAlumnoJugador() {
     } else if (inputBertha.checked) {
         spanAlumnoJugador.innerHTML = inputBertha.id
         alumnoJugador = inputBertha.id
+    } else if (inputYobanny.checked) {
+        spanAlumnoJugador.innerHTML = inputYobanny.id
+        alumnoJugador = inputYobanny.id
     } else {
         alert('Selecciona un alumno')
     }
@@ -372,10 +386,10 @@ function preguntaAleatoria() {
         console.log(ataqueAleatorio)
     } else if (ataqueAleatorio == 8) {
         contenedorPregunta.innerHTML = preguntas[ataqueAleatorio]
-        incisoUno.innerHTML = respuestasEight[0]
-        incisoDos.innerHTML = respuestasEight[1]
-        incisoTres.innerHTML = respuestasEight[2]
-        incisoCuatro.innerHTML = respuestasEight[3]
+        incisoUno.innerHTML = respuestasNinth[0]
+        incisoDos.innerHTML = respuestasNinth[1]
+        incisoTres.innerHTML = respuestasNinth[2]
+        incisoCuatro.innerHTML = respuestasNinth[3]
         iniciarPelea(ataqueAleatorio)
         console.log(ataqueAleatorio)
     } else if (ataqueAleatorio == 9) {
@@ -808,11 +822,11 @@ function pintarCanvas() {
     alumnoObjeto.pintar()
     katya.pintar()
     catalan.pintar()
-    yobanny.pintar()
+    yobannyReyes.pintar()
     if (alumnoObjeto.velocidadX !== 0 || alumnoObjeto.velocidadY !== 0) {
         revisarColision(katya)
         revisarColision(catalan)
-        revisarColision(yobanny)
+        revisarColision(yobannyReyes)
     }
 }
 
