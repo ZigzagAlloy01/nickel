@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>LAB MHN</title>
+        <link rel="stylesheet" href="style/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <a href="article.html">Artículo</a>
+            <a href="index.html">Juego</a>
+        </nav>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">LAB MHN</h1>
+            <h2 class="subtitulo">Elige un alumno:</h2>
+            <div id='contenedorTarjetas' class="tarjetas">
+            </div>
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre ICB</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <div>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            </div>
+        </section>
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">LAB MHN</h1>
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+            <div id='contenedorAtaques' class="tarjetas-ataques">
+            </div>
+            <div id="mensajes">
+                <p id="pregunta"></p>
+                <p id="inciso-uno"></p>
+                <p id="inciso-dos"></p>
+                <p id="inciso-tres"></p>
+                <p id="inciso-cuatro"></p>
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Vuelve a Jugar</button>
+                </section>
+            </div>
+            <div id="resultado"></div>
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador"></p>
+                    <p id="foto-jugador"></p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador">VS</div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo"></p>
+                    <p id="foto-enemigo"></p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>    
+            </div>
+            <audio controls="controls">
+                <source src="./songs/Dragon ball Z soundtrack Battle theme (Fight music) (320 kbps).mp3" type="audio/mp3">
+                    Tu navegador no soporta audio HTML5.
+            </audio>
+            <audio controls="controls">
+                <source src="./songs/Linkin Park - In The End.mp3" type="audio/mp3">
+                    Tu navegador no soporta audio HTML5.
+            </audio>
+        </section>
+        <script src="katya.js"></script>
+    </body>
+</html>
